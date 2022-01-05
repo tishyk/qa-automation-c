@@ -2,7 +2,7 @@ import pytest
 from core.browsers.chrome import WebBrowser, Chrome
 from core.browsers.remote import RemoteBrowser
 
-local = False#True
+local = False  # True
 if local:
     @pytest.fixture(scope="session")
     def browser() -> WebBrowser:
