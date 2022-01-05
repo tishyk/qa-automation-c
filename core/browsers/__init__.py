@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from pages.driver.driver import Driver
+from core.driver.driver import Driver
 
 
 class WebBrowser(ABC):

@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 from selenium.webdriver.remote import webelement
-
+from selenium.webdriver.common.action_chains import ActionChains
 
 class Element(ABC):
     """Abstraction of a web element."""
@@ -60,3 +60,7 @@ class WebElement(Element):
 
     def click(self) -> None:
         self._element.click()
+
+    def aclick(self) -> None:
+        #self._element.click()
+        ActionChains(self._driver).move_to_element(self._element).click(self._element).perform()

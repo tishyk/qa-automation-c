@@ -16,11 +16,11 @@ class MainElements:
     btn_conn_gmail = (By.XPATH, '//button[@data-cloudsponge-source="gmail"]')
     btn_conn_icloud = (By.XPATH, '//button[@data-cloudsponge-source="icloud"]')
     btn_conn_office365 = (By.XPATH, '//button[@data-cloudsponge-source="office365"]')
-    text_alert =(By.XPATH, '//div[@role="alert"]')
+    text_alert = (By.XPATH, '//div[@role="alert"]')
     create_nft = (By.XPATH, '//h5/../button')
     upload_window = (By.XPATH, '//div[@class="modal-dialog"]')
     input_files = (By.XPATH, '//input[@id="files"]')
-    uploaded_img = ('//img[@alt="Uploaded File"]')
+    uploaded_img = (By.XPATH,'//img[@alt="Uploaded File"]')
     btn_next = (By.XPATH, '//button[contains(text(), "Next")]')
     input_title = (By.XPATH, '//input[@name="title"]')
     input_description = (By.XPATH, '//input[@name="description"]')
@@ -29,26 +29,3 @@ class MainElements:
     select_category = (By.XPATH, '//select[@name="category"]')
     btn_mine = (By.XPATH, '//button[contains(text(), "Mine")]')
     btn_send = (By.XPATH, '//button[contains(text(), "Send")]')
-
-
-
-class TestsHelper(BasePage):
-
-    @classmethod
-    def is_here(self, page_element):
-        return self.find_element(page_element).is_displayed()
-
-
-    def enter_word(self, word):
-        search_field = self.find_element(MainElements.signup)
-        search_field.click()
-        search_field.send_keys(word)
-        return search_field
-
-    def click_on_the_search_button(self):
-        return self.find_element(MainElements.signup, time=2).click()
-
-    def check_navigation_bar(self):
-        all_list = self.find_elements(MainElements.signup, time=2)
-        nav_bar_menu = [x.text for x in all_list if len(x.text) > 0]
-        return nav_bar_menu

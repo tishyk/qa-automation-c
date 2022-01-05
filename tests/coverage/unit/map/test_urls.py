@@ -1,21 +1,33 @@
 from tests.coverage.markers import unit
-from pages.map.urls import Url, BASE_DEMO_URL
+from core.map.urls import Url, base_url
 
-_home: str = f"{BASE_DEMO_URL}/index.php"
-_register: str = f"{BASE_DEMO_URL}/register.php"
-_sign_on: str = f"{BASE_DEMO_URL}/login.php"
-
-
-@unit
-def test_home_url(home_url: Url) -> None:
-    assert home_url.get() == _home
+home: str = "home"
+about: str = "about-us"
+contact: str = "contact-us"
+signup: str = "signup"
+sign_on: str = "sign_on"
 
 
 @unit
-def test_register_url(register_url: Url) -> None:
-    assert register_url.get() == _register
+def test_home_url(homepage_url: Url) -> None:
+    assert homepage_url.get() == f"{base_url}/{home}"
 
 
 @unit
-def test_sign_on_url(sign_on_url: Url) -> None:
-    assert sign_on_url.get() == _sign_on
+def test_about_url(about_url: Url) -> None:
+    assert about_url.get() == f"{base_url}/{about}"
+
+
+@unit
+def test_contact_url(contact_url: Url) -> None:
+    assert contact_url.get() == f"{base_url}/{contact}"
+
+
+@unit
+def test_signup_url(register_url: Url) -> None:
+    assert register_url.get() == f"{base_url}/{signup}"
+
+
+@unit
+def test_sign_on_url(sign_url: Url) -> None:
+    assert sign_url.get() == f"{base_url}/{sign_on}"

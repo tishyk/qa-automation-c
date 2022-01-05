@@ -1,6 +1,6 @@
 from typing import Any
-from pages.driver.driver import Driver
-from pages.map.elements import Element, WebElement
+from core.driver.driver import Driver
+from core.map.elements import Element, WebElement
 
 
 class WebDriverOf(Driver):
@@ -17,6 +17,9 @@ class WebDriverOf(Driver):
 
     def find_element(self, by_: str, locator: str) -> Element:
         return WebElement(self._driver.find_element(by_, locator))
+
+    def find_elements(self, by_: str, locator: str) -> Element:
+        return WebElement(self._driver.find_elements(by_, locator))
 
     def implicitly_wait(self, time_to_wait: int) -> None:
         self._driver.implicitly_wait(time_to_wait)

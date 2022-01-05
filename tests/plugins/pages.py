@@ -1,8 +1,8 @@
 import pytest
-from pages.browsers import WebBrowser
-from pages.pages import Page
-from pages.pages.home import HomePage
-from pages.pages.register import RegisterPage
+from core.browsers import WebBrowser
+from core.pages import Page
+from core.pages.home import HomePage
+from core.pages.register import RegisterPage
 
 
 @pytest.fixture(scope="module")

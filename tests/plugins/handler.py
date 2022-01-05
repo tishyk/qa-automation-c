@@ -1,5 +1,5 @@
 import pytest
-from pages.map.handlers import HandlerBy, WebHandlerBy
+from core.map.handlers import HandlerBy, WebHandlerBy
 
 
 @pytest.fixture(scope="module")

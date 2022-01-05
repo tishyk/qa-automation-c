@@ -1,5 +1,5 @@
 from tests.coverage.markers import smoke
-from pages.pages.home import HomePage
+from core.pages.home import HomePage
 
 
 @smoke

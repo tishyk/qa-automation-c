@@ -1,6 +1,6 @@
 import pytest
 from tests.coverage.markers import unit
-from pages.browsers import WebBrowserError
+from core.browsers import WebBrowserError
 
 
 @unit

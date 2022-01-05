@@ -1,8 +1,8 @@
 from selenium.webdriver import Remote, ChromeOptions
 from selenium.webdriver.chrome.webdriver import WebDriver
-from pages.browsers import WebBrowser
-from pages.driver.web_driver import WebDriverOf
-from pages.driver.driver import Driver
+from core.browsers import WebBrowser
+from core.driver.web_driver import WebDriverOf
+from core.driver.driver import Driver
 
 
 class RemoteBrowser(WebBrowser):

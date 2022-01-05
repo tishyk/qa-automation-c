@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from pages.map.elements import Element
+from core.map.elements import Element
 
 
 class Driver(ABC):
@@ -19,6 +19,10 @@ class Driver(ABC):
 
     @abstractmethod
     def find_element(self, by_: str, value: str) -> Element:
+        pass
+
+    @abstractmethod
+    def find_elements(self, by_: str, value: str) -> Element:
         pass
 
     @abstractmethod

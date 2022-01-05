@@ -1,5 +1,5 @@
 import pytest
-from pages.browsers.chrome import WebBrowser, Chrome
+from core.browsers.chrome import WebBrowser, Chrome
 
 
 @pytest.fixture(scope="session")

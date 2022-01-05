@@ -1,10 +1,10 @@
 from typing import Callable
 import pytest
 from _pytest.fixtures import SubRequest
-from pages.browsers import WebBrowser, WebBrowserError
-from pages.browsers.chrome import Chrome
-from pages.browsers.safari import Safari
-from pages.browsers.firefox import FireFox
+from core.browsers import WebBrowser, WebBrowserError
+from core.browsers.chrome import Chrome
+from core.browsers.safari import Safari
+from core.browsers.firefox import FireFox
 
 
 @pytest.fixture()
