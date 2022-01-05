@@ -15,3 +15,5 @@ class RegistrationPage(object):
     btn_conn_icloud: str = '//button[@data-cloudsponge-source="icloud"]'
     btn_conn_office365: str = '//button[@data-cloudsponge-source="office365"]'
     window_for_create_nft: str = '//div[@role="dialog"]' #'//div[@class="modal-dialog"]'
+    btn_next: str = '//button[contains(text(), "Next")]'
+

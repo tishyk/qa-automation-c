@@ -22,7 +22,7 @@ class Driver(ABC):
         pass
 
     @abstractmethod
-    def find_elements(self, by_: str, value: str) -> Element:
+    def find_elements(self, by_: str, value: str):
         pass
 
     @abstractmethod
@@ -32,3 +32,12 @@ class Driver(ABC):
     @abstractmethod
     def close(self) -> None:
         pass
+
+    @abstractmethod
+    def switch_to(self) -> None:
+        pass
+
+    @abstractmethod
+    def window_handles(self) -> None:
+        pass
+

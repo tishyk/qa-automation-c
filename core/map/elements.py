@@ -61,6 +61,7 @@ class WebElement(Element):
     def click(self) -> None:
         self._element.click()
 
-    def aclick(self) -> None:
-        #self._element.click()
-        ActionChains(self._driver).move_to_element(self._element).click(self._element).perform()
+    def offset_click(self, x: int, y: int) -> None:
+        action = ActionChains(self._element.parent)
+        action.move_to_element_with_offset(self._element, x, y).click().perform()
+

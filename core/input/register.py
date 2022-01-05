@@ -1,7 +1,7 @@
 import random
 
 def get_random_string():
-    return random.choice(["x", "y", "z"]).join([
+    return random.choice(["u", "v", "w", "x", "y", "z"])+random.choice(["s", "o", "p", "t", "h", "i"]).join([
         random.choice(["aa", "ab", "ac", "ba", "bb", "bc", "ca", "cb", "cc"]),
         random.choice(["da", "db", "dc", "ea", "eb", "ec", "fa", "fb", "fc"]),
         ])

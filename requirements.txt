@@ -9,11 +9,13 @@ chardet==3.0.4
 charset-normalizer==2.0.10
 colorama==0.4.4
 cryptography==36.0.1
+env==0.1.0
 h11==0.12.0
 idna==2.8
 importlib-metadata==4.10.0
 iniconfig==1.1.1
 jmespath==0.10.0
+lxml==4.7.1
 outcome==1.1.0
 packaging==21.3
 pluggy==1.0.0

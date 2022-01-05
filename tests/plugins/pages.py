@@ -11,5 +11,5 @@ def home_page(browser: WebBrowser) -> Page:
 
 
 @pytest.fixture(scope="module")
-def register_page(browser: WebBrowser) -> Page:
+def reg_page(browser: WebBrowser) -> Page:
     return RegisterPage(browser)

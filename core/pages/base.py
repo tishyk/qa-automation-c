@@ -31,3 +31,7 @@ class BasePage(Page):
 
     def close(self) -> None:
         self._driver().close()
+
+    def switch_to(self, win_index: int) -> None:
+        self._driver.switch_to(self._driver.window_handles[win_index])
+
